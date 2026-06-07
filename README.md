@@ -56,89 +56,89 @@ type 'NativeFloat32List' is not a subtype of type 'JsObject'
  
 ```
 mind-sync/
-├── backend/                          # Go 1.22 HTTP API
+├── backend/                         
 │   ├── cmd/
 │   │   └── server/
-│   │       └── main.go               # Entry point, DI wiring, graceful shutdown
+│   │       └── main.go               
 │   ├── internal/
 │   │   ├── domain/
 │   │   │   ├── entities/
-│   │   │   │   ├── neural_blueprint.go   # Core DSP output entity
-│   │   │   │   ├── neural_signature.go   # Saved preset + session entities
-│   │   │   │   └── errors.go             # Typed domain error hierarchy
+│   │   │   │   ├── neural_blueprint.go  
+│   │   │   │   ├── neural_signature.go   
+│   │   │   │   └── errors.go            
 │   │   │   └── repositories/
-│   │   │       └── interfaces.go         # Pure Go repository contracts
+│   │   │       └── interfaces.go        
 │   │   ├── application/
 │   │   │   ├── dtos/
-│   │   │   │   ├── blueprint_dto.go      # Request/response DTOs
+│   │   │   │   ├── blueprint_dto.go     
 │   │   │   │   └── signature_dto.go
 │   │   │   └── usecases/
-│   │   │       ├── compute_blueprint.go  # DSP orchestration use case
-│   │   │       ├── manage_signatures.go  # Preset CRUD use case
-│   │   │       └── track_sessions.go     # Session lifecycle use case
+│   │   │       ├── compute_blueprint.go  
+│   │   │       ├── manage_signatures.go  
+│   │   │       └── track_sessions.go    
 │   │   ├── infrastructure/
 │   │   │   ├── persistence/
-│   │   │   │   ├── sqlite_db.go          # Schema, WAL, connection pool
-│   │   │   │   ├── signature_repo.go     # SQLite NeuralSignature impl
-│   │   │   │   └── session_repo.go       # SQLite SessionRecord impl
+│   │   │   │   ├── sqlite_db.go          
+│   │   │   │   ├── signature_repo.go     
+│   │   │   │   └── session_repo.go      
 │   │   │   └── logger/
-│   │   │       └── logger.go             # Structured zap logger
+│   │   │       └── logger.go            
 │   │   └── interfaces/http/
 │   │       ├── handlers/
-│   │       │   ├── blueprint_handler.go  # POST /blueprint/compute
-│   │       │   ├── signature_handler.go  # CRUD /signatures
-│   │       │   ├── session_handler.go    # Session lifecycle endpoints
-│   │       │   └── response.go           # Standardized JSON envelope
+│   │       │   ├── blueprint_handler.go  
+│   │       │   ├── signature_handler.go  
+│   │       │   ├── session_handler.go    
+│   │       │   └── response.go           
 │   │       ├── middleware/
-│   │       │   └── middleware.go         # RequestID, Logger, Recoverer
+│   │       │   └── middleware.go         
 │   │       └── router/
-│   │           └── router.go             # chi v5 route registration
+│   │           └── router.go            
 │   ├── pkg/dsp/
-│   │   ├── engine.go                 # DSP computation engine (pure math)
-│   │   └── engine_test.go            # Psychoacoustic correctness tests
+│   │   ├── engine.go                
+│   │   └── engine_test.go           s
 │   ├── Makefile
 │   └── go.mod
 │
-└── frontend/                         # Flutter 3.22 (Web target)
+└── frontend/                        
     ├── lib/
-    │   ├── main.dart                 # App entry, MultiBlocProvider wiring
+    │   ├── main.dart               
     │   ├── core/
     │   │   ├── constants/
-    │   │   │   ├── colors.dart       # Full cyberpunk color system
-    │   │   │   └── dimensions.dart   # Spacing, radius, typography scale
+    │   │   │   ├── colors.dart       
+    │   │   │   └── dimensions.dart   
     │   │   ├── theme/
-    │   │   │   └── app_theme.dart    # MaterialApp ThemeData configuration
+    │   │   │   └── app_theme.dart   
     │   │   └── router/
-    │   │       └── home_screen.dart  # Root screen composition
+    │   │       └── home_screen.dart  
     │   ├── features/
     │   │   ├── audio_engine/
     │   │   │   ├── bloc/
-    │   │   │   │   ├── audio_engine_bloc.dart    # State machine
-    │   │   │   │   ├── audio_engine_event.dart   # Sealed event hierarchy
-    │   │   │   │   └── audio_engine_state.dart   # Immutable state
+    │   │   │   │   ├── audio_engine_bloc.dart   
+    │   │   │   │   ├── audio_engine_event.dart  
+    │   │   │   │   └── audio_engine_state.dart   
     │   │   │   ├── models/
-    │   │   │   │   ├── neural_blueprint.dart     # DSP output model
-    │   │   │   │   └── synthesis_parameters.dart # User slider state
+    │   │   │   │   ├── neural_blueprint.dart     
+    │   │   │   │   └── synthesis_parameters.dart 
     │   │   │   ├── services/
-    │   │   │   │   ├── api_client.dart           # HTTP client
-    │   │   │   │   └── web_audio_synthesizer.dart# Web Audio API bridge
+    │   │   │   │   ├── api_client.dart          
+    │   │   │   │   └── web_audio_synthesizer.dart
     │   │   │   └── widgets/
-    │   │   │       └── control_panel.dart        # All sliders + transport
+    │   │   │       └── control_panel.dart       
     │   │   ├── visualizer/
     │   │   │   ├── painters/
-    │   │   │   │   └── waveform_painter.dart     # CustomPainter
+    │   │   │   │   └── waveform_painter.dart     
     │   │   │   └── widgets/
-    │   │   │       └── waveform_visualizer.dart  # Animated container
+    │   │   │       └── waveform_visualizer.dart 
     │   │   ├── presets/
     │   │   │   └── widgets/
-    │   │   │       └── presets_panel.dart        # Factory + saved presets
+    │   │   │       └── presets_panel.dart      
     │   │   └── session_history/
     │   │       └── widgets/
     │   │           └── session_history_panel.dart
     │   └── shared/
     │       └── widgets/
-    │           ├── neon_card.dart       # Base card, GlowingText, StatusBadge
-    │           ├── neural_slider.dart   # Branded parameter slider
+    │           ├── neon_card.dart      
+    │           ├── neural_slider.dart  
     │           └── brainwave_indicator.dart
     └── pubspec.yaml
 ```
@@ -149,11 +149,11 @@ mind-sync/
  
 | State   | Range     | Target Use Case                        | Entrainment Color |
 |---------|-----------|----------------------------------------|-------------------|
-| GAMMA   | 30–100 Hz | Peak cognitive performance, flow state | 🔴 Red            |
-| BETA    | 13–30 Hz  | Active thinking, problem solving       | 🟠 Amber          |
-| ALPHA   | 8–13 Hz   | Relaxed focus, creative inspiration    | 🔵 Cyan           |
-| THETA   | 4–8 Hz    | Deep meditation, hypnagogic state      | 🟣 Violet         |
-| DELTA   | 0.5–4 Hz  | Deep dreamless sleep, recovery         | 💙 Blue           |
+| GAMMA   | 30–100 Hz | Peak cognitive performance, flow state |    Red            |
+| BETA    | 13–30 Hz  | Active thinking, problem solving       |    Amber          |
+| ALPHA   | 8–13 Hz   | Relaxed focus, creative inspiration    |    Cyan           |
+| THETA   | 4–8 Hz    | Deep meditation, hypnagogic state      |    Violet         |
+| DELTA   | 0.5–4 Hz  | Deep dreamless sleep, recovery         |    Blue           |
 
 ---
  
