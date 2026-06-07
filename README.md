@@ -50,6 +50,15 @@ True 1/f pink noise (the most natural-sounding noise profile) cannot be generate
 
 ---
 
+## Known Issues & Debugging
+
+### Audio Engine - Buffer Type Mismatch
+The application currently encounters a runtime `TypeError` when initializing the noise synthesis layer in the browser:
+
+```text
+Failed to start audio: TypeError: Instance of 'NativeFloat32List': 
+type 'NativeFloat32List' is not a subtype of type 'JsObject'
+
 ## System Architecture
 
 ```
