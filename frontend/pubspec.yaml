@@ -1,0 +1,46 @@
+name: mind_sync
+description: Mind-Sync Neural Audio Architect – Real-time binaural beat synthesis with cyberpunk UI.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_bloc: ^8.1.5
+  equatable: ^2.0.5
+
+  # HTTP client
+  http: ^1.2.1
+
+  # Audio synthesis (low-level PCM generation via dart:web_audio / just_audio)
+  just_audio: ^0.9.38
+
+  # Local storage for lightweight app preferences
+  shared_preferences: ^2.2.3
+
+  # Animations
+  flutter_animate: ^4.5.0
+
+  # Icons
+  lucide_icons: 0.257.0
+
+  # Utilities
+  uuid: ^4.4.0
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  bloc_test: ^9.1.7
+  mocktail: ^1.0.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
