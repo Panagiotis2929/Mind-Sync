@@ -156,3 +156,13 @@ mind-sync/
 ## License
  
 MIT © 2024 Mind-Sync Contributors
+
+---
+
+## Author
+
+### KYRANAS RALLIS-PANAGIOTIS
+
+- GitHub: [@Panagiotis2929](https://github.com/Panagiotis2929)
+
+---
