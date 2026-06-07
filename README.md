@@ -142,17 +142,6 @@ mind-sync/
  
 ---
  
-## Prerequisites
- 
-| Tool          | Version  | Install |
-|---------------|----------|---------|
-| Go            | ≥ 1.22   | [go.dev/dl](https://go.dev/dl/) |
-| CGO + GCC     | Any      | `sudo apt install gcc` / Xcode CLT |
-| Flutter SDK   | ≥ 3.22   | [flutter.dev/install](https://flutter.dev/install) |
-| Chrome/Edge   | Any      | Required for Web Audio API |
- 
----
- 
 ## License
  
 MIT © 2024 Mind-Sync Contributors
