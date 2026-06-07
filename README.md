@@ -30,8 +30,10 @@
 
 ### Debugging
 Κατά την εκτέλεση της εφαρμογής στον browser, θα εμφανιστεί το παρακάτω σφάλμα στην κονσόλα, το οποίο οφείλεται στον τρόπο επικοινωνίας του Dart με τη JavaScript:
+```text
 Failed to start audio: TypeError: Instance of 'NativeFloat32List': 
 type 'NativeFloat32List' is not a subtype of type 'JsObject'
+```
 
 ---
 
@@ -154,6 +156,3 @@ mind-sync/
 ## License
  
 MIT © 2024 Mind-Sync Contributors
-```text
-Failed to start audio: TypeError: Instance of 'NativeFloat32List': 
-type 'NativeFloat32List' is not a subtype of type 'JsObject'
