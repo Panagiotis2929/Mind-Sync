@@ -1,6 +1,10 @@
 # Mind-Sync: Neural Audio Architect
 
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/d2f5fe14-880a-46f7-8036-dd61d0463df5" />
+<img width="1914" height="907" alt="image" src="https://github.com/user-attachments/assets/f4e44905-66c3-427a-ba49-f65196dc7e9f" />
+<img width="1908" height="907" alt="image" src="https://github.com/user-attachments/assets/4c78876e-e5df-4029-99c8-9bdfb508a8ea" />
+
+
 
 Το Mind-Sync είναι μια εφαρμογή που χρησιμοποιεί μαθηματικά για να παράγει ήχους που βοηθούν στη συγκέντρωση, τη χαλάρωση ή τον ύπνο, αξιοποιώντας την τεχνολογία του **Binaural Beat Entrainment**. 
 Αντί να παίζει προηχογραφημένα αρχεία (MP3), η εφαρμογή "συνθέτει" τον ήχο τη στιγμή που τον ακούς, υπολογίζοντας συχνότητες και κυματομορφές σε πραγματικό χρόνο.
