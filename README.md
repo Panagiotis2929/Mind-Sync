@@ -100,7 +100,7 @@ mind-sync/
 │   │           └── router.go            
 │   ├── pkg/dsp/
 │   │   ├── engine.go                
-│   │   └── engine_test.go           s
+│   │   └── engine_test.go           
 │   ├── Makefile
 │   └── go.mod
 │
