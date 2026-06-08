@@ -1,8 +1,8 @@
 # Mind-Sync: Neural Audio Architect
 
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/d2f5fe14-880a-46f7-8036-dd61d0463df5" />
-<img width="1914" height="907" alt="image" src="https://github.com/user-attachments/assets/f4e44905-66c3-427a-ba49-f65196dc7e9f" />
-<img width="1908" height="907" alt="image" src="https://github.com/user-attachments/assets/4c78876e-e5df-4029-99c8-9bdfb508a8ea" />
+<img width="1912" height="907" alt="image" src="https://github.com/user-attachments/assets/c8fb1eb6-fd1d-47b0-abd5-5108685ed18d" />
+<img width="1912" height="907" alt="image" src="https://github.com/user-attachments/assets/f4e44905-66c3-427a-ba49-f65196dc7e9f" />
+<img width="1912" height="907" alt="image" src="https://github.com/user-attachments/assets/4c78876e-e5df-4029-99c8-9bdfb508a8ea" />
 
 
 
