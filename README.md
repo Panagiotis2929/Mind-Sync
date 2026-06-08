@@ -53,7 +53,7 @@ flutter run -d chrome
 Failed to start audio: TypeError: Instance of 'NativeFloat32List': 
 type 'NativeFloat32List' is not a subtype of type 'JsObject'
 ```
-<img width="1905" height="692" alt="image" src="https://github.com/user-attachments/assets/420cdc26-f83c-4b47-a9bf-2fff13954ffc" />
+<img width="1912" height="907" alt="image" src="https://github.com/user-attachments/assets/420cdc26-f83c-4b47-a9bf-2fff13954ffc" />
 
 ---
 
