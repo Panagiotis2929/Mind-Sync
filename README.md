@@ -6,49 +6,51 @@
 
 <img width="1912" height="700" alt="image" src="https://github.com/user-attachments/assets/4c78876e-e5df-4029-99c8-9bdfb508a8ea" />
 
-Το Mind-Sync είναι μια εφαρμογή που χρησιμοποιεί μαθηματικά για να παράγει ήχους που βοηθούν στη συγκέντρωση, τη χαλάρωση ή τον ύπνο, αξιοποιώντας την τεχνολογία του **Binaural Beat Entrainment**. 
-Αντί να παίζει προηχογραφημένα αρχεία (MP3), η εφαρμογή "συνθέτει" τον ήχο τη στιγμή που τον ακούς, υπολογίζοντας συχνότητες και κυματομορφές σε πραγματικό χρόνο.
+Mind-Sync is an application that uses mathematics to generate sounds that assist in concentration, relaxation, or sleep, leveraging Binaural Beat Entrainment technology.
+Instead of playing pre-recorded files, the application "synthesizes" the sound the moment you listen to it, calculating frequencies and waveforms in real-time.
 
 ---
 
-# Οδηγίες Τοπικής Εκτέλεσης
+# Local Execution Instructions
 
-Για να λειτουργήσει η εφαρμογή και να εμφανιστεί η ένδειξη **DSP ONLINE**, απαιτείται η ταυτόχρονη εκτέλεση του backend και του frontend.
+For the application to function and for the DSP ONLINE indicator to appear, the simultaneous execution of both the backend and frontend is required.
 
 ## 1. Backend
-Ανοίξτε ένα τερματικό, μεταβείτε στον φάκελο `backend` και εκκινήστε τον server:
+Open a terminal, navigate to the backend folder, and start the server:
 
 ```bash
 cd backend
 go run cmd/server/main.go
 ```
 ## 2. frontend 
-Ανοίξτε ένα δεύτερο τερματικό, μεταβείτε στον φάκελο frontend και εκτελέστε την εφαρμογή στον browser:
+Open a second terminal, navigate to the frontend folder, and run the application in the browser:
 
 ```bash
 cd frontend
 flutter run -d chrome
 ```
-Η εφαρμογή θα συνδεθεί αυτόματα με τον τοπικό server μόλις ολοκληρωθεί η εκκίνηση του frontend.
+The application will automatically connect to the local server once the frontend startup is complete.
 
 ---
 
-### Τι κάνει την εφαρμογή να ξεχωρίζει;
-* **Zero File I/O:** Δεν χρησιμοποιούνται αρχεία ήχου. Όλα παράγονται από μαθηματικούς τύπους.
-* **DSP Engine:** Ο ήχος δημιουργείται στο πρόγραμμα περιήγησης (browser) μέσω του **Web Audio API**.
-* **Responsive UI:** Φτιαγμένο με **Flutter Web**, με cyberpunk αισθητική.
-* **Offline-First:** Λειτουργεί αυτόνομα, χωρίς cloud εξαρτήσεις.
+### What makes the application stand out?
+* **Zero File I/O:** No audio files are used. Everything is generated from mathematical formulas.
+* **DSP Engine:** Sound is created in the browser via the Web Audio API.
+* **Responsive UI:** Built with Flutter Web, featuring a cyberpunk aesthetic.
+* **Offline-First:** Works autonomously, without cloud dependencies.
 
-### Τεχνολογίες που χρησιμοποιήθηκαν
+### Technologies Used
 * **Frontend:** Flutter Web (Dart)
-* **Backend:** Go (Golang)
-* **Βάση Δεδομένων:** SQLite (για την αποθήκευση των προτιμήσεων του χρήστη)
-* **Ήχος:** Web Audio API (PCM synthesis)
 
+* **Backend:** Go (Golang)
+
+* **Database:** SQLite (for storing user preferences)
+
+* **Audio:** Web Audio API (PCM synthesis)
 ---
 
 ### Debugging
-Κατά την εκτέλεση της εφαρμογής στον browser, θα εμφανιστεί το παρακάτω σφάλμα στην κονσόλα, το οποίο οφείλεται στον τρόπο επικοινωνίας του Dart με τη JavaScript:
+During the execution of the application in the browser, the following error will appear in the console, which is due to the way Dart communicates with JavaScript:
 ```text
 Failed to start audio: TypeError: Instance of 'NativeFloat32List': 
 type 'NativeFloat32List' is not a subtype of type 'JsObject'
